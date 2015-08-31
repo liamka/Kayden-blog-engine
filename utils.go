@@ -9,16 +9,6 @@ import (
 	"strings"
 )
 
-type Config struct {
-  	Mysql string `json:"mysql"`
-  	CookieName string `json:"cookieName"`
-  	Pass string `json:"pass"`
-  	Social   []struct {
-	    Url   string `json:"url"`
-	    Title string `json:"title"`
-	} `json:"social"`
-}
-
 func ConvertMarkdownToHtml(markdawn string) string {
 	return string(blackfriday.MarkdownBasic([]byte(markdawn)))
 }
@@ -71,11 +61,3 @@ func timeRFC(t string) string{
 	Time := tm.Format(time.RFC1123Z)
 	return Time
 }
-
-
-
-
-
-
-
-
