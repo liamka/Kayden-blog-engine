@@ -18,7 +18,9 @@ Simple blog engine on go. Nothing else.
 ### Install
 
 1) Rename config-sample.json to config.json and change params
+
 2) Upload base BASE.sql
+
 3) Install dependencies:
 	3.1) go get github.com/go-sql-driver/mysql
 	3.2) go get github.com/russross/blackfriday
