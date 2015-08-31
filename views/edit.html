@@ -10,7 +10,7 @@
 <form method="post" action="kayden/edit/save" autocomplete="off">
 	<input type="text" name="title" value="{{ .Title }}" placeholder="Title">
 	<textarea rows="12" name="body" placeholder="Body">{{ .Body }}</textarea>
-	<input type="text" name="tags" value="" placeholder="Tags separeted by comma">
+	<input type="text" name="tags" value="{{ .Tags }}" placeholder="Tags separeted by comma">
 	<input type="submit" class="update" value="Save">
 	<input type="hidden" name="id" value="{{ .Id }}">
 </form>
