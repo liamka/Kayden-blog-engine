@@ -23,9 +23,9 @@ Simple blog engine on go. Nothing else.
 
 3) Install dependencies:
 
-	3.1) go get github.com/go-sql-driver/mysql
+	go get github.com/go-sql-driver/mysql
 	
-	3.2) go get github.com/russross/blackfriday
+	go get github.com/russross/blackfriday
 	
 3) Build it and run!
 
