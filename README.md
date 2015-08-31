@@ -22,9 +22,13 @@ Simple blog engine on go. Nothing else.
 2) Upload base BASE.sql
 
 3) Install dependencies:
+
 	3.1) go get github.com/go-sql-driver/mysql
+	
 	3.2) go get github.com/russross/blackfriday
+	
 3) Build it and run!
+
 4) Go to http://your-website.com/kayden and login
 
 ### License
