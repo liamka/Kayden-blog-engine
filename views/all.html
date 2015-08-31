@@ -1,0 +1,15 @@
+{{ define "all" }}
+{{ template "header" }}
+
+<h1>Все записи</h1>
+
+{{ range . }}
+<p>
+	<a href="/note/{{ .Id }}">{{ .Title }}</a> ({{ .Tags }})
+</p>
+{{ end }}
+
+<hr/><a class="all" href="/all">все записи</a>
+{{ template "footer" }}
+
+{{ end }}

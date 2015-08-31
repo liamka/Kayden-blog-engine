@@ -1,0 +1,14 @@
+{{ define "index" }}
+
+{{ range . }}
+	<article>
+	<h1><a href="/note/{{ .Id }}">{{ .Title }}</a></h1>
+	<section>{{ .Body }}</section>
+	<mark>{{ .Time }} {{ .Tags }}</mark>
+	</article>
+{{ end }}
+
+<hr/><a class="all" href="/all">все записи</a>
+{{ template "footer" }}
+
+{{ end }}

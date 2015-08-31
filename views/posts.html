@@ -1,0 +1,22 @@
+{{ define "posts" }}
+{{ template "header" }}
+
+<div class="kayden">
+
+	{{ template "menu" }}
+
+	<div class="posts">
+
+	{{ range . }}
+		<div class="post">
+			<h2><a href="/kayden/edit/{{ .Id }}">{{ .Title }}</a> <a class="delete" href="/kayden/delete/{{ .Id }}">delete</a></h2>
+		</div>
+	{{ end }}
+
+	</div>
+
+</div>
+
+{{ template "footer" }}
+
+{{ end }}

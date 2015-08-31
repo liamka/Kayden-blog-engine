@@ -1,0 +1,35 @@
+{{ define "header" }}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>{{.Title}}</title>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+	<meta name="description" content="{{.Description}}"/>
+	<meta name="keywords" content="{{.Keywords}}"/>
+	<meta name="robots" content="index, follow"/>
+
+	<base href="{{.URI}}">
+
+	<link href="/public/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	
+	<link rel="alternate" type="application/rss+xml" href="/rss" title="Feed" />
+
+	<link href="/public/css/style.css" rel="stylesheet" media="all" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+	<div class="header">
+		<h1><a href="/">{{.Title}}</a></h1>
+		<p>{{.Subtitle}}</p>
+		<p class="social">
+			{{with .Social}}
+			    {{range .}}
+			   		<a target=_blank href="{{.Url}}">{{.Title}}</a>
+			    {{end}}
+			{{end}}
+		</p>
+	</div>
+	<div class="content">
+{{ end }}

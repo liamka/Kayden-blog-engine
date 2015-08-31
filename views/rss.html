@@ -1,0 +1,11 @@
+{{ define "rss" }}
+{{range .}}
+	<item>
+	<title>{{ .Title }}</title>
+	<link>{{.URI}}/note/{{ .Id }}</link>
+	<description><![CDATA[{{ .Body }}]]></description>
+	<pubDate>{{ .Time }}</pubDate>
+	<guid>{{.URI}}/note/{{ .Id }}</guid>
+	</item>
+{{end}}
+</channel></rss>{{ end }}

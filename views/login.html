@@ -1,0 +1,16 @@
+{{ define "login" }}
+
+{{ template "header" }}
+
+<div class="kayden">
+
+	<form method="post" action="/kayden/login" autocomplete="off">
+		<input type="password" name="pass" placeholder="Password">
+	</form>
+
+</div>
+
+<hr/>
+{{ template "footer" }}
+
+{{ end }}

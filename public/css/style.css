@@ -1,0 +1,41 @@
+/************ General */
+body {background: #fff;max-width: 960px;padding: 40px;margin: 20px auto;}
+a {color: #1c5c76;text-decoration: underline;}
+
+/************ Header */
+.header {text-align: center;padding: 0 0 10px 0;}
+.header h1 {margin: 0;font-size: 30px;text-shadow: -4px 4px rgba(0, 0, 0, 0.16);}
+.header h1 a {text-decoration: none;color: #000;font-family: Tahoma;font-weight: 700;}
+.header p {font-family: Georgia;}
+	.header p.social a {margin: 4px;}
+
+/************ Content */
+.content {font-family: Georgia;}
+	.content article {margin: 0 0 80px 0;display: block;}
+	.content article h1 a {width: 100%;font-family: Georgia;color: #000;font-size: 30px;text-decoration: none;font-weight: 100;}
+		.content article h1 a:hover {text-decoration: underline;}
+	.content article section {width: 100%;line-height: 1.5em;color: #3E4349;font-size: 17px;}
+		.content article section img.big {text-align: center;margin: 0% -16% auto;display: block;width: 132%;}
+	.content article mark {display: inline-table;padding: 3px 5px;margin: 8px 0 0 0;color: #aa9c84;background:#fff;line-height: 28px;}
+	.content article mark a {background: #e2e9f8;color: #1c5c76;border: 1px solid transparent;border-radius: 12px;padding: 0px 6px;text-decoration: none;border-bottom: 1px dotted #999;}
+	.content a.tag {margin: 5px;}
+
+/************ Custom */
+.social a:hover {text-decoration: underline;}
+pre {background: #eee;padding: 7px 30px;margin: 15px -30px;line-height: 1.3em;overflow: auto;}
+
+@media only screen and (min-width: 100px) and (max-width: 800px) {
+	body {padding: 10px;margin: 20px;}
+}
+
+/************ Kayden */
+.kayden {font-size: 14px;}
+.kayden .menu a {font-size: 22px;margin-right: 14px;}
+.kayden .posts h2 {border: 1px dashed #DADADA;padding: 8px;}
+	.kayden .posts h2 a {font-family: Georgia;color: #000;text-decoration: none;font-weight: 100;}
+		.kayden .posts h2 a.delete {float: right;font-style: italic;}
+.kayden form input, .kayden form textarea {border: 2px solid;border-radius: 5px;margin: 10px 0;width: 98%;padding: 10px 7px;font-family: Georgia;font-size: 20px;color: #5A5A5A;}
+	.kayden form input:focus, .kayden form textarea:focus {outline: none;}
+	.kayden form input.new {cursor:pointer;background: #00A1E8;color: #fff;width: 30%;}
+	.kayden form input.update {cursor:pointer;background: #6EA709;color: #fff;width: 30%;}
+.kayden .uploads img {}

@@ -1,0 +1,14 @@
+{
+	"title": "Blog title",
+	"subtitle": "Your subtitle",
+	"uri": "http://your-blog-url.com",
+	"description": "Description",
+	"keywords": "Keywords",
+	"mysql": "user:pass@/base?charset=utf8",
+	"cookieName": "kayden",
+	"pass": "pass",
+	"Social": [
+		{"url": "URL", "title": "TITLE #1"},
+		{"url": "URL", "title": "TITLE #2"}
+	]
+}

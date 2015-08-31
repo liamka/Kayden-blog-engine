@@ -1,0 +1,24 @@
+{{ define "upload" }}
+
+{{ template "header" }}
+
+<div class="kayden">
+
+{{ template "menu" }}
+
+<form enctype="multipart/form-data" action="kayden/upload" method="post">
+      <input type="file" name="uploadfile" />
+      <input type="hidden" name="token" value="{{.}}"/>
+      <input type="submit" class="new" value="upload" />
+</form>
+
+{{ range . }}
+    <div class="uploads"><img src="/uploads/{{ .Name }}">{{ .Name }}</div><br/>
+    <br /><br />
+{{end}}
+
+</div>
+
+{{ template "footer" }}
+
+{{ end }}
