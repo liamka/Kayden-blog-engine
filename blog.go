@@ -39,6 +39,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 	for rows.Next() {
 		p := post{}
 		rows.Scan(&p.Id, &p.Title, &p.Body, &p.Tags, &p.Time)
+		v.Title = config.Title
 		p.Body = ConvertMarkdownToHtml(p.Body)
 		p.Time = timeX(p.Time)
 		p.Tags = tagsX(p.Tags,"true")
@@ -61,6 +62,7 @@ func single(w http.ResponseWriter, r *http.Request) {
 	for rows.Next() {
 		p := post{}
 		rows.Scan(&p.Id, &p.Title, &p.Body, &p.Tags, &p.Time)
+		v.Title = config.Title + ": " + p.Title
 		p.Body = ConvertMarkdownToHtml(p.Body)
 		p.Time = timeX(p.Time)
 		p.Tags = tagsX(p.Tags,"true")

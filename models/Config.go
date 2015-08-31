@@ -7,7 +7,8 @@ import (
 
 type Config struct {
 	Title string `json:"title"`
-  	Subtitle string `json:"subtitle"`
+	Subtitle string `json:"subtitle"`
+  	TitleHeader string `json:"titleheader"`
   	URI string `json:"uri"`
   	Description string `json:"description"`
   	Keywords string `json:"keywords"`
@@ -22,6 +23,7 @@ type Config struct {
 
 type Vars struct {
 	Title   	string
+	TitleHeader   	string
 	Subtitle 	string
 	URI 		string
 	Description string
@@ -50,6 +52,7 @@ func Values(vars Config) Vars {
 	json.Unmarshal(varz, &SocData)
 	p := Vars{
 		Title:   	vars.Title,
+		TitleHeader:   	vars.TitleHeader,
 		Subtitle:   vars.Subtitle,
 		URI:   vars.URI,
 		Description:   vars.Description,
