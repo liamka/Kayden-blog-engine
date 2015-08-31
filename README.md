@@ -29,7 +29,7 @@ Simple blog engine on go. Nothing else.
 	
 3) Build it and run!
 
-4) Go to http://your-website.com/kayden and login
+4) Go to http://your-website/kayden and login
 
 ### License
 
