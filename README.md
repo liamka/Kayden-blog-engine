@@ -2,7 +2,7 @@ Keywords: Golang, go, Blog, Engine, MySQL
 
 <img src="http://golang.org/doc/gopher/frontpage.png" alt="Golang logo" align="right"/>
 
-## Kayden - blog engine on go(golang)
+### Kayden - blog engine on go(golang)
 
 Simple blog engine on go. Nothing else.
 
