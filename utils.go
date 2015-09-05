@@ -16,11 +16,13 @@ func ConvertMarkdownToHtml(markdawn string) string {
 func CheckCookies(r *http.Request) bool {
 	a := false
 	for _, cookie := range r.Cookies() {
-	    if cookie.Value == config.Pass {
-	    	a = true
-	    } else {
-	    	a = false
-	    }
+		if cookie.Name == config.CookieName {
+			if cookie.Value == config.Pass {
+		    	a = true
+		    } else {
+		    	a = false
+		    }
+		}
 	}
 	return a
 }
