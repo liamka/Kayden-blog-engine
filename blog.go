@@ -6,6 +6,7 @@ import (
 	"text/template"
 	"time"
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/liamka/Superior"
 	"database/sql"
 	"./models"
 	"io"
@@ -100,7 +101,7 @@ func allPosts(w http.ResponseWriter, r *http.Request) {
 func tagPosts(w http.ResponseWriter, r *http.Request) {
 	// Get tag
 	tag := r.URL.Path[len("/tag/"):]
-	stmt, _ := db.Prepare("SELECT * FROM kayden_blog_posts where tags LIKE ?")
+	stmt, _ := db.Prepare("SELECT * FROM kayden_blog_posts where tags LIKE ? ORDER BY id DESC LIMIT 1000000")
 	rows, _ := stmt.Query("%"+tag+"%")
 	defer rows.Close()
 	posts := []post{}
@@ -369,7 +370,7 @@ func uploads(w http.ResponseWriter, r *http.Request) {
 ////////////////////////////////
 func main() {
 	// Sample
-	log("Kayden love it!")
+	Superior.Print("Kayden love it!", "normal", "green")
 	// Conf
 	config = models.Conf()
 	v = models.Values(config)

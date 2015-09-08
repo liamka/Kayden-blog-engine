@@ -3,7 +3,6 @@ package main
 import (
 	"github.com/russross/blackfriday"
 	"net/http"
-	"fmt"
 	"strconv"
 	"time"
 	"strings"
@@ -32,10 +31,6 @@ func timeX(t string) string{
 	tm := time.Unix(i, 0)
 	Time := tm.Format("_2-01-2006")
 	return Time
-}
-
-func log(STR string) {
-	fmt.Printf("\x1b[32;1m%s\x1b[0m\n", STR)
 }
 
 func tagsX(t string, u string) string{
