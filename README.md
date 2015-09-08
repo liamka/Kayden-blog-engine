@@ -27,6 +27,8 @@ Simple blog engine on go. Nothing else.
 	
 	go get github.com/russross/blackfriday
 	
+	go get github.com/liamka/Superior
+	
 3) Build it and run!
 
 4) Go to http://your-website/kayden and login
