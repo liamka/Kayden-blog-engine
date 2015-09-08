@@ -13,8 +13,8 @@
 </form>
 
 {{ range . }}
-    <div class="uploads"><img src="/uploads/{{ .Name }}">{{ .Name }}</div><br/><hr/>
-    <br /><br />
+    <div class="uploads"><img src="/uploads/{{ .Name }}">{{ .Name }} <br/><br/><a href="kayden/upload/delete/{{ .Name }}">Delete</a><hr/>
+    <br /><br /></div>
 {{end}}
 
 </div>

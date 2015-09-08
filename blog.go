@@ -366,6 +366,29 @@ func uploads(w http.ResponseWriter, r *http.Request) {
 }
 
 ////////////////////////////////
+// Delete uploaded file
+////////////////////////////////
+func uploadsDelete(w http.ResponseWriter, r *http.Request) {
+	// Access
+	access := CheckCookies(r)
+	if !access {
+		http.Redirect(w, r, "/kayden/login", 302)
+	}
+
+	// Get file name
+	file := r.URL.Path[len("/upload/upload/delete/"):]
+
+	err := os.Remove("./uploads/"+file)
+	if err != nil {
+        fmt.Println(err)
+        return
+    }
+
+    http.Redirect(w, r, "/kayden/upload", 302)
+}
+
+
+////////////////////////////////
 // MAIN
 ////////////////////////////////
 func main() {
@@ -394,6 +417,7 @@ func main() {
 	http.HandleFunc("/kayden/edit/save", updatePost)
 	http.HandleFunc("/kayden/delete/", deletePost)
 	http.HandleFunc("/kayden/upload", uploads)
+	http.HandleFunc("/kayden/upload/delete/", uploadsDelete)
 	
 	// Get port
 	http.ListenAndServe(":3000", nil)
