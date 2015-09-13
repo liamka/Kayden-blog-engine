@@ -1,0 +1,22 @@
+{{ define "drafts" }}
+{{ template "header" }}
+
+<div class="kayden">
+
+	{{ template "menu" }}
+
+	<div class="posts">
+
+	{{ range . }}
+		<div class="post">
+			<h2><a href="/kayden/drafts/edit/{{ .Id }}">{{ .Title }}</a> <a class="options" href="/kayden/drafts/delete/{{ .Id }}">[delete draft]</a> <a class="options" href="/kayden/drafts/publish/{{ .Id }}">[publish draft]</a></h2>
+		</div>
+	{{ end }}
+
+	</div>
+
+</div>
+
+{{ template "footer" }}
+
+{{ end }}

@@ -9,7 +9,7 @@
 
 	{{ range . }}
 		<div class="post">
-			<h2><a href="/kayden/edit/{{ .Id }}">{{ .Title }}</a> <a class="delete" href="/kayden/delete/{{ .Id }}">delete</a></h2>
+			<h2><a href="/kayden/edit/{{ .Id }}">{{ .Title }}</a> <a class="options" href="/kayden/delete/{{ .Id }}">delete</a></h2>
 		</div>
 	{{ end }}
 

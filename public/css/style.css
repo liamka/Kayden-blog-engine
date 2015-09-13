@@ -33,7 +33,7 @@ pre {background: #eee;padding: 7px 30px;margin: 15px -30px;line-height: 1.3em;ov
 .kayden .menu a {font-size: 22px;margin-right: 14px;}
 .kayden .posts h2 {border: 1px dashed #DADADA;padding: 8px;}
 	.kayden .posts h2 a {font-family: Georgia;color: #000;text-decoration: none;font-weight: 100;}
-		.kayden .posts h2 a.delete {float: right;font-style: italic;}
+		.kayden .posts h2 a.options {float: right;font-style: italic;color: brown;}
 .kayden form input, .kayden form textarea {border: 2px solid;border-radius: 5px;margin: 10px 0;width: 98%;padding: 10px 7px;font-family: Georgia;font-size: 20px;color: #5A5A5A;}
 	.kayden form input:focus, .kayden form textarea:focus {outline: none;}
 	.kayden form input.new {cursor:pointer;background: #00A1E8;color: #fff;width: 30%;}

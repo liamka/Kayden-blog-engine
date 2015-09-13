@@ -1,0 +1,20 @@
+{{ define "draft_new" }}
+
+{{ template "header" }}
+
+<div class="kayden">
+
+{{ template "menu" }}
+
+<form method="post" action="kayden/drafts/new/save" autocomplete="off">
+	<input type="text" name="title" value="" placeholder="Title">
+	<textarea rows="12" name="body" placeholder="Body"></textarea>
+	<input type="text" name="tags" value="" placeholder="Tags separeted by comma">
+	<input type="submit" class="new" value="New draft">
+</form>
+
+</div>
+
+{{ template "footer" }}
+
+{{ end }}

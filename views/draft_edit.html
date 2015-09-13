@@ -1,0 +1,21 @@
+{{ define "draft_edit" }}
+
+{{ template "header" }}
+
+<div class="kayden">
+
+{{ template "menu" }}
+
+{{ range . }}
+<form method="post" action="kayden/drafts/edit/save" autocomplete="off">
+	<input type="text" name="title" value="{{ .Title }}" placeholder="Title">
+	<textarea rows="12" name="body" placeholder="Body">{{ .Body }}</textarea>
+	<input type="text" name="tags" value="{{ .Tags }}" placeholder="Tags separeted by comma">
+	<input type="submit" class="update" value="Save draft">
+	<input type="hidden" name="id" value="{{ .Id }}">
+</form>
+{{ end }}
+
+{{ template "footer" }}
+
+{{ end }}
