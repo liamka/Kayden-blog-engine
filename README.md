@@ -12,6 +12,7 @@ Simple blog engine on go. Nothing else.
 - Fully customizable
 - Tags (search by tag)
 - Markdown
+- Drafts
 - RSS
 - Simple ;)
 
